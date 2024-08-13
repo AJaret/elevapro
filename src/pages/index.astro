@@ -1,10 +1,51 @@
 ---
+import { Image } from "astro:assets";
 import Header1 from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
+import AboutImage from "../images/about-img.png";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="ElevaPro">
 	<main>
-		<Header1>
+		<Header1/>
+		<Navbar/>
+		<section id="header-div" class="flex justify-center items-center">
+			<div class="container flex">
+				<div class="w-1/2">
+					<h1>Innovación y calidad que te elevan al siguiente nivel.</h1>
+					<p><span style="color: #50A5DD; font-weight: bold;">Elevapro</span> es empresa mexicana con profesionales en la instalación, reparación, modernización y mantenimiento de sistemas de elevadores y escaleras eléctricas.</p>
+				</div>
+				<div class="w-1/2"></div>
+			</div>
+		</section>
+
+		<section id="about" class="flex justify-center items-center container mt-20 mb-20">
+			<div>
+				<Image src={AboutImage} alt="About Image" />
+			</div>
+			<div>
+				<div class="w-1/2">
+					<h1>Innovación y calidad que te elevan al siguiente nivel.</h1>
+					<p><span style="color: #50A5DD; font-weight: bold;">Elevapro</span> es empresa mexicana con profesionales en la instalación, reparación, modernización y mantenimiento de sistemas de elevadores y escaleras eléctricas.</p>
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
+
+
+<style>
+	#header-div{
+        background-image: url('../images/header_bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 86vh;
+        color: white;
+    }
+    h1{
+        font-size: 3em;
+        font-weight: bold;
+    }
+</style>
