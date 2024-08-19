@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import Header1 from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
+import BlueE from "../images/blue_e.svg";
+import Layout from "../layouts/Layout.astro";
+---
+
+
+<Layout title="Contacto">
+	<main>
+		<Header1/>
+		<Navbar/>
+		<section id="header" class="flex justify-center items-center">
+			<div class="container flex flex-wrap md:flex-nowrap">
+				<div class="w-full md:w-1/2 mb-4 md:mb-0">
+					<Image src={BlueE} alt="About Image" class="w-1/4" />
+					<h1 class="font-bold text-4xl mt-8">Contacto</h1>
+				</div>
+				<div class="w-full md:w-1/2"></div>
+			</div>
+		</section>
+        
+        <section id="contact_form" class="mt-28">
+            <div class="flex justify-center">
+				<div class="text-center w-2/3">
+					<h1 class="font-bold text-4xl">Contáctanos</h1>
+					<p class="mt-8">“Para soluciones que realmente marcan la diferencia, <span class="text-custom-sky-blue">Elevapro</span> es tu aliado.<br>¡Conéctate con nosotros!”</p>
+				</div>
+			</div>
+        </section>
+
+		<Footer />
+	</main>
+</Layout>
+
+<style>
+    #header{
+        background-image: url('../images/header_bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 35vh;
+        color: white;
+    }
+</style>

@@ -1,0 +1,176 @@
+---
+import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
+import Header1 from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
+import BlueE from "../images/blue_e.svg";
+import CivilLiability from "../images/services/civil_liability.png";
+import EmergencyCall from "../images/services/emergency_calls.png";
+import MaintenanceProgram from "../images/services/maintenance_program.png";
+import Modernizations from "../images/services/modernizations.png";
+import RepairParts from "../images/services/repair_parts.png";
+import Repairs from "../images/services/repairs.png";
+import ValuesIcon1 from "../images/services/values_icon1.png";
+import ValuesIcon2 from "../images/services/values_icon2.png";
+import ValuesIcon3 from "../images/services/values_icon3.png";
+import ValuesIcon4 from "../images/services/values_icon4.png";
+import Layout from "../layouts/Layout.astro";
+---
+
+
+<Layout title="Servicios">
+	<main>
+		<Header1/>
+		<Navbar/>
+		<section id="header" class="flex justify-center items-center">
+			<div class="container flex flex-wrap md:flex-nowrap">
+				<div class="w-full md:w-1/2 mb-4 md:mb-0">
+					<Image src={BlueE} alt="About Image" class="w-1/4" />
+					<h1 class="font-bold text-4xl mt-8">Nuestros servicios</h1>
+				</div>
+				<div class="w-full md:w-1/2"></div>
+			</div>
+		</section>
+        
+        <section id="maintenance_program" class="mt-32 color-[#323C45]">
+            <div class="container flex flex-wrap md:flex-nowrap items-center">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <Image src={MaintenanceProgram} alt="About Image" class="w-2/3 mb-10 md:mb-0" />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h1 class="font-bold text-3xl">Programa de Mantenimiento</h1>
+                    <p class="mt-5 text-sm">Evaluamos las condiciones de tu equipo para crear un plan de trabajo, según las necesidades del proyecto, basándonos en módulos mensuales para un correcto servicio de mantenimiento de elevadores.</p>
+                    <p class="mt-5 text-lg">Instalación de Elevadores y Escaleras Eléctricas</p>
+                    <p class="mt-5 text-sm">Nuestro equipo de expertos se encarga de la instalación de sistemas de transporte vertical, asegurando que cada proyecto cumpla con las normas vigentes y los más altos estándares de calidad y seguridad. Trabajamos con múltiples marcas, lo que nos permite ofrecer soluciones a medida para cada cliente.</p>
+                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="maintenance_program" class="mt-32 color-[#323C45]">
+            <div class="container flex flex-wrap md:flex-nowrap items-center">
+                <div class="w-full md:w-1/2">
+                    <h1 class="font-bold text-3xl">Llamadas de Emergencia</h1>
+                    <p class="mt-5 text-sm">Las llamadas de emergencia y servicio de rescate, todos los días del año, con personal profesional y capacitado, sin costo adicional.</p>
+                    <p class="mt-5 text-lg">Atención de Emergencias</p>
+                    <p class="mt-5 text-sm">Entendemos que las fallas pueden ocurrir en cualquier momento. Por ello, ofrecemos un servicio de atención de emergencias disponible las 24 horas del día, los 7 días de la semana, asegurando una respuesta rápida y eficaz ante cualquier inconveniente.</p>
+                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <Image src={EmergencyCall} alt="About Image" class="w-2/3 mt-10 md:mt-0" />
+                </div>
+            </div>
+        </section>
+
+        <section id="repairs" class="mt-32 color-[#323C45]">
+            <div class="container flex flex-wrap md:flex-nowrap items-center">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <Image src={Repairs} alt="About Image" class="w-2/3 mb-10 md:mb-0" />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h1 class="font-bold text-3xl">Reparaciones</h1>
+                    <p class="mt-5 text-sm">Contamos con el personal certificado para reparar sus ascensores en el menor tiempo. Utilizando las herramientas adecuadas para realizar reparaciones menores o mayores.</p>
+                    <p class="mt-5 text-sm">Nuestros técnicos están altamente capacitados para diagnosticar y reparar cualquier problema que puedan presentar sus sistemas de transporte vertical. Utilizamos piezas y componentes de alta calidad para asegurar reparaciones duraderas y eficaces.</p>
+                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="values" class="mt-32 pb-28 pt-10 bg-[#294253] text-white">
+            <div class="container">
+                <div class="flex flex-wrap md:flex-nowrap justify-between items-center p-10">
+                    <div class="w-full md:w-1/2">
+                        <p class="text-sm text-custom-sky-blue">Tu tranquilidad en movimiento, con la experiencia de <span class="text-white">Elevapro</span></p>
+                        <h1 class="font-bold text-4xl mt-5">Nuestros Valores</h1>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <p class="text-sm">En <span class="text-custom-sky-blue">Elevapro</span>, nuestros valores fundamentales guían cada acción y decisión que tomamos. Creemos firmemente que estos principios son esenciales para proporcionar servicios de alta calidad y asegurar la satisfacción y seguridad de nuestros clientes.</p>
+                        <button class="pt-3 pb-3 pl-5 pr-5 border-white border-2 mt-6">Contactanos</button>
+                    </div>
+                </div>
+    
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-20">
+                    <div class="text-center bg-white p-8 rounded-md">
+                        <Image src={ValuesIcon1} alt="Image 1" class="mx-auto w-1/2 h-24 object-contain"/>
+                        <p class="mt-6 text-sm font-semibold text-black">Transparencia</p>
+                        <p class="text-xs mt-2 text-[#9B9B9B]">Creemos en la comunicación abierta y honesta con nuestros clientes y socios. Proporcionamos información clara y precisa, asegurando una relación basada en la confianza mutua.</p>
+                    </div>
+                    
+                    <div class="text-center bg-white p-8 rounded-md">
+                        <Image src={ValuesIcon2} alt="Image 2" class="mx-auto w-1/2 h-24 object-contain"/>
+                        <p class="mt-6 text-sm font-semibold text-black">Profesionalismo</p>
+                        <p class="text-xs mt-2 text-[#9B9B9B]">Nuestro equipo está compuesto por expertos altamente calificados y certificados, comprometidos a brindar un servicio de excelencia. Nos esforzamos por mantener un alto nivel de profesionalismo en todas nuestras interacciones.</p>
+                    </div>
+                  
+                    <div class="text-center bg-white p-8 rounded-md">
+                        <Image src={ValuesIcon3} alt="Image 3" class="mx-auto w-1/2 h-24 object-contain"/>
+                        <p class="mt-6 text-sm font-semibold text-black">Innovación</p>
+                        <p class="text-xs mt-2 text-[#9B9B9B]">Estamos constantemente buscando nuevas y mejores maneras de mejorar nuestros servicios y productos. Fomentamos la creatividad y adoptamos las tecnologías más avanzadas para ofrecer soluciones eficientes y modernas.</p>
+                    </div>
+                  
+                    <div class="text-center bg-white p-8 rounded-md">
+                        <Image src={ValuesIcon4} alt="Image 4" class="mx-auto w-1/2 h-24 object-contain"/>
+                        <p class="mt-6 text-sm font-semibold text-black">Liderazgo</p>
+                        <p class="text-xs mt-2 text-[#9B9B9B]">Nos pocisionamos como lideres en el sector del transporte vertical, guiando con visión y determinación. Nuestro liderazgo se basa en la capacidad de influir positivamente y en la constante búsqueda de la excelencia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="maintenance_program" class="mt-32 color-[#323C45]">
+            <div class="container flex flex-wrap md:flex-nowrap items-center">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <Image src={Modernizations} alt="About Image" class="w-2/3 mb-10 md:mb-0" />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h1 class="font-bold text-3xl">Modernizaciones</h1>
+                    <p class="mt-5 text-sm">Si lo que buscas es aumentar la plusvalía de tu inmueble y un ahorro de energía o cambios estéticos nosotros podemos renovarlo y adaptarlo a los estándares de seguridad vigentes.<br><br>Ofrecemos servicios de modernización para actualizar y mejorar sus elevadores y escaleras eléctricas. La modernización puede incluir la actualización de componentes mecánicos y electrónicos, así como la mejora de la eficiencia energética y la implementación de nuevas tecnologías. Este servicio no solo mejora el rendimiento y la seguridad, sino que también puede aumentar el valor de su propiedad.</p>
+                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="maintenance_program" class="mt-32 color-[#323C45]">
+            <div class="container flex flex-wrap md:flex-nowrap items-center">
+                <div class="w-full md:w-1/2">
+                    <h1 class="font-bold text-3xl">Refacciones</h1>
+                    <p class="mt-5 text-sm">Elevapro cuenta con un amplio stock de refacciones, nuevas y originales garantizadas para tu elevador.</p>
+                    <p class="mt-5 text-lg">Capacitación</p>
+                    <p class="mt-5 text-sm">Proveemos capacitación a su personal sobre el uso y mantenimiento adecuado de los sistemas instalados. Esto asegura un manejo correcto y eficiente de los equipos, minimizando el riesgo de fallas y accidentes.</p>
+                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <Image src={RepairParts} alt="About Image" class="w-2/3 mt-10 md:mt-0" />
+                </div>
+            </div>
+        </section>
+        
+        <section id="repairs" class="mt-32 color-[#323C45]">
+            <div class="container flex flex-wrap md:flex-nowrap items-center">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <Image src={CivilLiability} alt="About Image" class="w-2/3 mb-10 md:mb-0" />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h1 class="font-bold text-3xl">Responsabilidad Civil</h1>
+                    <p class="mt-5 text-sm">Elevapro cuenta con un seguro de responsabilidad civil para seguridad y tranquilidad de nuestros clientes.</p>
+                    <p class="mt-5 text-lg">Auditorías y Evaluaciones de Seguridad</p>
+                    <p class="mt-5 text-sm">Realizamos auditorías y evaluaciones de seguridad para asegurar que sus elevadores y escaleras eléctricas cumplan con todas las normativas y estándares de seguridad. Estas auditorías nos permiten identificar posibles riesgos y recomendar acciones correctivas para mejorar la seguridad y el desempeño de los equipos.</p>
+                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                </div>
+            </div>
+        </section>
+
+		<Footer />
+	</main>
+</Layout>
+
+<style>
+    #header{
+        background-image: url('../images/header_bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 35vh;
+        color: white;
+    }
+</style>

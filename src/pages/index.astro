@@ -1,12 +1,26 @@
 ---
 import { Image } from "astro:assets";
+import Footer from "../components/Footer.astro";
 import Header1 from "../components/Header.astro";
 import Navbar from "../components/Navbar.astro";
 import AboutImage from "../images/about-img.png";
 import AboutIcon1 from "../images/about_icon1.svg";
 import AboutIcon2 from "../images/about_icon2.svg";
 import BlueE from "../images/blue_e.svg";
+import Goals from "../images/goals.png";
 import HireImg from "../images/hire.png";
+import Maintenance1 from "../images/maintenance1.png";
+import Maintenance2 from "../images/maintenance2.png";
+import MaintenanceIcon1 from "../images/maintenance_icon1.png";
+import MaintenanceIcon2 from "../images/maintenance_icon2.png";
+import Process1 from "../images/process1.png";
+import Process2 from "../images/process2.png";
+import Process3 from "../images/process3.png";
+import Process4 from "../images/process4.png";
+import Process5 from "../images/process5.png";
+import Solutions1 from "../images/solutions1.png";
+import Solutions2 from "../images/solutions2.png";
+import Solutions3 from "../images/solutions3.png";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -14,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
 	<main>
 		<Header1/>
 		<Navbar/>
-		<section id="header-div" class="flex justify-center items-center">
+		<section id="header" class="flex justify-center items-center">
 			<div class="container flex flex-wrap md:flex-nowrap">
 				<div class="w-full md:w-1/2 mb-4 md:mb-0">
 					<Image src={BlueE} alt="About Image" class="w-1/4" />
@@ -59,8 +73,8 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>		  
 
-		<section id="hire">
-			<div class="flex flex-wrap md:flex-nowrap justify-between items-center container mt-20 gap-12 pt-16 pb-16">
+		<section id="hire" class="mt-20">
+			<div class="flex flex-wrap md:flex-nowrap justify-between items-center container gap-12 pt-16 pb-16">
 				<div class="w-full md:w-1/2">
 					<p class="text-custom-sky-blue font-bold">Nuestros servicios</p>
 					<h1 class="text-white mt-5 text-3xl font-bold">Por Qué Contratarnos</h1>
@@ -105,18 +119,171 @@ import Layout from "../layouts/Layout.astro";
 							</div>
 						</li>
 					</ul>
+					<div class="flex justify-end items-center">
+						<button class="text-white p-5 rounded-sm flex items-center font-bold">
+							SERVICIOS
+							<span class="ml-2 inline-flex">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+								</svg>
+							</span>
+						</button>
+					</div>
 				</div>
 				<div class="w-full md:w-1/2">
 					<Image src={HireImg} alt="About Image" class="w-full" />
 				</div>
 			</div>
 		</section>
+
+		<section id="solutions" class="text-[#323C45] container mt-20">
+			<div class="flex flex-wrap md:flex-nowrap justify-between items-center gap-12 pt-16 pb-16">
+				<h1 class="font-bold text-4xl w-full md:w-1/2">Soluciones integrales para un transporte vertical.</h1>
+				<p class="w-full md:w-1/2 text-left text-sm">Ofrecemos capacitación a su personal para el correcto uso y mantenimiento de los sistemas instalados o reparados. Esto asegura un manejo adecuado y prolonga la vida útil de los equipos.</p>
+			</div>
+
+			<div class="mt-10 flex flex-wrap md:flex-nowrap justify-center items-stretch gap-8">
+				<div class="w-full md:w-1/3 flex flex-col">
+					<Image src={Solutions1} alt="Personal image" class="w-full" />
+					<div class="flex flex-col justify-between flex-grow p-4">
+						<p class="text-2xl">Personal Calificado</p>
+						<p class="mt-7">Contamos con técnicos y especialistas altamente capacitados y certificados, asegurando un servicio profesional y de calidad en cada proyecto.</p>
+					</div>
+				</div>
+				<div class="w-full md:w-1/3 flex flex-col">
+					<Image src={Solutions2} alt="Tech image" class="w-full" />
+					<div class="flex flex-col justify-between flex-grow p-4">
+						<p class="text-2xl">Tecnología Avanzada</p>
+						<p class="mt-7">Incorporamos las últimas tecnologías y métodos innovadores en todos nuestros servicios, garantizando eficiencia y modernidad en cada solución que ofrecemos.</p>
+					</div>
+				</div>
+				<div class="w-full md:w-1/3 flex flex-col">
+					<Image src={Solutions3} alt="Costs image" class="w-full" />
+					<div class="flex flex-col justify-between flex-grow p-4">
+						<p class="text-2xl">Costos Competitivos</p>
+						<p class="mt-7">Proporcionamos soluciones económicas sin comprometer la calidad. Nuestro objetivo es ofrecer la mejor relación calidad-precio en todos nuestros servicios.</p>
+					</div>
+				</div>
+			</div>			  
+
+			<div class="mt-12 flex justify-center items-center">
+				<button class="text-white p-5 rounded-sm flex items-center font-bold">
+					SERVICIOS
+					<span class="ml-2 inline-flex">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+					</svg>
+					</span>
+				</button>
+			</div>
+		</section>
+
+		<section id="maintenance" class="mt-28 container">
+			<div class="flex flex-wrap md:flex-nowrap justify-between items-center gap-16">
+				<div class="text-right md:w-1/2 w-full">
+					<h1 class="text-5xl font-bold">Mantenimiento Preventivo y Correctivo</h1>
+					<p class="mt-5">Ofrecemos servicios de mantenimiento tanto preventivo como correctivo, asegurando el óptimo funcionamiento y prolongando la vida útil de sus equipos.</p>
+				</div>
+
+				<div class="md:w-1/2 w-full">
+					<Image src={Maintenance1} alt="About Image" class="w-full" />
+				</div>
+			</div>
+			
+			<div class="md:relative flex flex-wrap md:flex-nowrap gap-16 mt-20 alig-items-center">
+				<div class="md:relative md:top-32 md:z-10 w-full md:w-1/2">
+					<div class="flex flex-wrap md:flex-nowrap justify-between items-center bg-white">
+						<div class="w-1/3 flex justify-start md:justify-center">
+							<Image src={MaintenanceIcon1} alt="About Image" class="w-1/2 mb-5 md:mb-0" />
+						</div>
+						<div class="w-full">
+							<p class="font-bold text-sm">SERVICIOS PERSONALIZADOS</p>
+							<p class="text-xs mt-2">Ofrecemos soluciones a medida que se adaptan a las necesidades específicas de cada cliente, proporcionando un enfoque personalizado en cada etapa del proyecto.</p>
+						</div>
+					</div>
+					<div class="flex flex-wrap md:flex-nowrap justify-between items-center mt-8 bg-white">
+						<div class="w-1/3 flex justify-start md:justify-center">
+							<Image src={MaintenanceIcon2} alt="About Image" class="w-1/2 mb-5 md:mb-0" />
+						</div>
+						<div class="w-full">
+							<p class="font-bold text-sm">TECNOLOGÍA AVANZADA</p>
+							<p class="text-xs mt-2">Incorporamos las últimas tecnologías y métodos innovadores en todos nuestros servicios, garantizando eficiencia y modernidad en cada solución que ofrecemos.</p>
+						</div>
+					</div>
+				</div>
+				<div class="md:absolute md:top-0 md:right-0 w-full z-0 md:flex md:justify-end">
+					<Image src={Maintenance2} alt="About Image" class="md:w-3/5 w-full" />
+				</div>
+			</div>						
+		</section>
+
+		<section id="process" class="mt-20 md:mt-60 container">
+			<div class="flex justify-center">
+				<div class="text-center w-2/3">
+					<h1 class="font-bold text-5xl">Proceso de trabajo</h1>
+					<p class="mt-8">Ofrecemos capacitación a su personal para el correcto uso y mantenimiento de los sistemas instalados o reparados. Esto asegura un manejo adecuado y prolonga la vida útil de los equipos.</p>
+				</div>
+			</div>
+			<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mt-20">
+				<div class="text-center">
+					<Image src={Process1} alt="Image 1" class="mx-auto w-1/2 h-24 object-contain"/>
+					<p class="mt-6 text-sm font-semibold">CONSULTA INICIAL</p>
+					<p class="text-xs mt-2">El primer paso es entender sus necesidades. Realizamos una consulta inicial donde escuchamos sus requerimientos y evaluamos las condiciones actuales de sus elevadores y escaleras eléctricas.</p>
+				</div>
+				
+				<div class="text-center">
+					<Image src={Process2} alt="Image 2" class="mx-auto w-1/2 h-24 object-contain"/>
+					<p class="mt-6 text-sm font-semibold">DIAGNÓSTICO Y EVALUACIÓN</p>
+					<p class="text-xs mt-2">Nuestros técnicos realizan una inspección detallada de sus sistemas de transporte vertical para identificar cualquier problema y evaluar el estado general de los equipos. Este diagnóstico nos permite ofrecerle un informe detallado y preciso.</p>
+				</div>
+			  
+				<div class="text-center">
+					<Image src={Process3} alt="Image 3" class="mx-auto w-1/2 h-24 object-contain"/>
+					<p class="mt-6 text-sm font-semibold">PROPUESTA DE SOLUCIONES</p>
+					<p class="text-xs mt-2">Con base en el diagnóstico, elaboramos una propuesta de soluciones a medida. Esta incluye opciones de reparación, modernización o mantenimiento, con un enfoque en mejorar la seguridad, eficiencia y durabilidad de sus equipos.</p>
+				</div>
+			  
+				<div class="text-center">
+					<Image src={Process4} alt="Image 4" class="mx-auto w-1/2 h-24 object-contain"/>
+					<p class="mt-6 text-sm font-semibold">PLANIFICACIÓN Y PRESUPUESTO</p>
+					<p class="text-xs mt-2">Trabajamos junto con usted para planificar el proyecto, estableciendo un cronograma y un presupuesto claro. Nos aseguramos de que todas las fases del proyecto estén bien definidas y alineadas con sus expectativas y necesidades.</p>
+				</div>
+			  
+				<div class="text-center">
+					<Image src={Process5} alt="Image 5" class="mx-auto w-1/2 h-24 object-contain"/>
+					<p class="mt-6 text-sm font-semibold">MANTENIMIENTO CONTINUO</p>
+					<p class="text-xs mt-2">Proporcionamos servicios de mantenimiento preventivo y correctivo para asegurar que sus sistemas de transporte vertical sigan operando de manera óptima. Nuestro equipo está disponible para responder rápidamente a cualquier necesidad de mantenimiento.</p>
+				</div>
+			</div>			  
+		</section>
+
+		<section id="goals" class="container mt-40">
+			<div class="flex flex-wrap md:flex-nowrap justify-between gap-12 md:relative">
+				<div class="w-full md:w-1/3">
+					<div>
+						<h1 class="font-bold text-5xl">Objetivos</h1>
+						<p class="mt-8">Para <span style="color: #50A5DD; font-weight: bold;">Elevapro</span> la seguridad de los usuarios es primero, nuestro personal está altamente calificado y certificado, los cuales reciben capacitación de manera constante. Nuestro objetivo principal es su seguridad y tranquilidad, por ello le brindamos el asesoramiento necesario con soluciones económicas para que sus equipos sean más seguros, confiables, eficientes y duraderos.</p>
+					</div>
+					<div class="mt-12 bg-[#50A5DD] p-9 text-white md:absolute md:z-10 w-full md:w-4/6">
+						<div class="p-0 md:pl-12">
+							<p class="font-bold text-xl">Nuestros Valores</p>
+							<p class="mt-4">En <strong>Elevapro</strong>, nuestros valores fundamentales guían cada acción y decisión que tomamos. Creemos firmemente que estos principios son esenciales para proporcionar servicios de alta calidad y asegurar la satisfacción y seguridad de nuestros clientes.</p>
+						</div>
+					</div>
+				</div>
+				<div class="w-full md:w-2/3">
+					<Image src={Goals} alt="About Image" class="w-full z-0" />
+				</div>
+			</div>
+		</section>
+
+		<Footer />
 	</main>
 </Layout>
 
 
 <style>
-	#header-div{
+	#header{
         background-image: url('../images/header_bg.png');
         background-repeat: no-repeat;
         background-size: cover;
@@ -124,7 +291,7 @@ import Layout from "../layouts/Layout.astro";
         height: 86vh;
         color: white;
     }
-    #header-div h1{
+    #header h1{
         font-size: 3em;
         font-weight: bold;
     }
@@ -150,5 +317,8 @@ import Layout from "../layouts/Layout.astro";
 	}
 	#hire li{
 		color: white;
+	}
+	#hire button, #solutions button{
+		background-color: #50A5DD;
 	}
 </style>
