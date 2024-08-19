@@ -3,6 +3,10 @@ import { Image } from "astro:assets";
 import Header1 from "../components/Header.astro";
 import Navbar from "../components/Navbar.astro";
 import AboutImage from "../images/about-img.png";
+import AboutIcon1 from "../images/about_icon1.svg";
+import AboutIcon2 from "../images/about_icon2.svg";
+import BlueE from "../images/blue_e.svg";
+import HireImg from "../images/hire.png";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,23 +15,99 @@ import Layout from "../layouts/Layout.astro";
 		<Header1/>
 		<Navbar/>
 		<section id="header-div" class="flex justify-center items-center">
-			<div class="container flex">
-				<div class="w-1/2">
+			<div class="container flex flex-wrap md:flex-nowrap">
+				<div class="w-full md:w-1/2 mb-4 md:mb-0">
+					<Image src={BlueE} alt="About Image" class="w-1/4" />
 					<h1>Innovación y calidad que te elevan al siguiente nivel.</h1>
-					<p><span style="color: #50A5DD; font-weight: bold;">Elevapro</span> es empresa mexicana con profesionales en la instalación, reparación, modernización y mantenimiento de sistemas de elevadores y escaleras eléctricas.</p>
+					<p><span style="color: #50A5DD; font-weight: bold;">Elevapro</span> es una empresa mexicana con profesionales en la instalación, reparación, modernización y mantenimiento de sistemas de elevadores y escaleras eléctricas.</p>
 				</div>
-				<div class="w-1/2"></div>
+				<div class="w-full md:w-1/2"></div>
 			</div>
-		</section>
+		</section>		  
 
-		<section id="about" class="flex justify-center items-center container mt-20 mb-20">
-			<div>
-				<Image src={AboutImage} alt="About Image" />
+		<section id="about" class="flex flex-wrap md:flex-nowrap justify-center items-center container mt-20 gap-4">
+			<div class="p-4 w-full md:w-1/2">
+				<Image src={AboutImage} alt="About Image" class="w-full" />
 			</div>
-			<div>
-				<div class="w-1/2">
-					<h1>Innovación y calidad que te elevan al siguiente nivel.</h1>
-					<p><span style="color: #50A5DD; font-weight: bold;">Elevapro</span> es empresa mexicana con profesionales en la instalación, reparación, modernización y mantenimiento de sistemas de elevadores y escaleras eléctricas.</p>
+			<div class="justify-center p-4 w-full md:w-1/2">
+				<div class="mb-10">
+					<h1>Acerca De</h1>
+					<p class="text-justify">Contamos con más de 12 años de experiencia en el ramo del transporte vertical multimarca. Ofrecemos al mercado soluciones integrales a cada proyecto, cumpliendo con las normas vigentes y los estándares más altos de calidad y seguridad.</p>
+				</div>
+				<div class="flex flex-wrap md:flex-nowrap justify-between w-full gap-6">
+					<div class="w-full">
+						<Image src={AboutIcon1} alt="About Image" class="w-16 mb-8" />
+						<h2>NUESTRA MISIÓN</h2>
+						<p class="text-gray-600">Nuestra misión es proporcionar soluciones integrales en transporte vertical, enfocándonos principalmente en brindarles a nuestros clientes una amplia gama de posibilidades para cumplir con sus objetivos, basándonos en experiencia, calidad e innovación.</p>
+					</div>
+					<div class="w-full">
+						<Image src={AboutIcon2} alt="About Image" class="w-16 mb-8" />
+						<h2>NUESTRA VISIÓN</h2>
+						<p class="text-gray-600">Ser una empresa líder a nivel nacional proporcionando soluciones innovadoras y eficientes en transporte vertical, ofreciendo siempre la mejor solución. Conservando clientes que disfrutan de su experiencia y usuarios que se sientan seguros.</p>
+					</div>
+				</div>
+				<div class="mt-12">
+					<button class="text-white p-3 flex items-center font-bold">
+						CONTACTO
+						<span class="ml-2 inline-flex">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+						</svg>
+						</span>
+					</button>
+				</div>
+			</div>
+		</section>		  
+
+		<section id="hire">
+			<div class="flex flex-wrap md:flex-nowrap justify-between items-center container mt-20 gap-12 pt-16 pb-16">
+				<div class="w-full md:w-1/2">
+					<p class="text-custom-sky-blue font-bold">Nuestros servicios</p>
+					<h1 class="text-white mt-5 text-3xl font-bold">Por Qué Contratarnos</h1>
+					<ul class="list-none mt-10">
+						<li class="flex items-start mb-6">
+							<div class="w-6 h-5 bg-[#F4A13D] rounded-full flex items-center justify-center mt-1 mr-4">
+								<svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold">Experiencia y Conocimiento</h3>
+								<p class="mt-2">
+									Con más de 12 años en el mercado del transporte vertical multimarca, nuestro equipo posee la experiencia y el conocimiento necesarios para garantizar la mejor calidad en instalación, reparación, modernización y mantenimiento de elevadores y escaleras eléctricas.
+								</p>
+							</div>
+						</li>
+						<li class="flex items-start mb-6">
+							<div class="w-6 h-5 bg-[#F4A13D] rounded-full flex items-center justify-center mt-1 mr-4">
+								<svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold">Compromiso con la Seguridad</h3>
+								<p class="mt-2">
+									La seguridad de nuestros usuarios es nuestra prioridad. Nuestro personal está altamente calificado y certificado, recibiendo capacitación constante para asegurar que todos los trabajos se realicen cumpliendo con los más altos estándares de seguridad.
+								</p>
+							</div>
+						</li>
+						<li class="flex items-start mb-6">
+							<div class="w-6 h-5 bg-[#F4A13D] rounded-full flex items-center justify-center mt-1 mr-4">
+								<svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold">Calidad y Confiabilidad</h3>
+								<p class="mt-2">
+									Nos comprometemos a ofrecer servicios de la más alta calidad. Utilizamos materiales y tecnologías de primera, garantizando que nuestros productos y servicios sean confiables y duraderos.
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="w-full md:w-1/2">
+					<Image src={HireImg} alt="About Image" class="w-full" />
 				</div>
 			</div>
 		</section>
@@ -44,8 +124,31 @@ import Layout from "../layouts/Layout.astro";
         height: 86vh;
         color: white;
     }
-    h1{
+    #header-div h1{
         font-size: 3em;
         font-weight: bold;
     }
+	#about{
+		color: #001D2F;
+	}
+	#about h1{
+		font-size: 1.9em;
+		font-weight: bold;
+	}
+	#about h2{
+		font-size: 0.85em;
+		font-weight: bold;
+	}
+	#about button{
+		background-color: #001D2F;
+	}
+	p{
+		font-family: 'Lato', 'sans-seris';
+	}
+	#hire{
+		background-color: #001D2F;
+	}
+	#hire li{
+		color: white;
+	}
 </style>

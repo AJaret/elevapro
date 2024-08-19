@@ -1,9 +1,13 @@
 ---
+import { Image } from "astro:assets";
+import Logo from "../images/elevapro_logo.svg";
 ---
 
 <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-2 shadow-md">
     <div class="flex-1 flex justify-between items-center">
-        <a href="#" class="text-xl">Company</a>
+        <a href="#" class="text-xl">
+            <Image src={Logo} alt="About Image" class="w-2/3 p-4" />
+        </a>
     </div>
 
     <label for="menu-toggle" class="pointer-cursor md:hidden block">
@@ -31,5 +35,8 @@
     header{
         background-color: #E4E4E4;
         color: #323C45;
+    }
+    nav{
+        font-weight: bold;
     }
 </style>

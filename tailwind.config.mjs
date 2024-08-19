@@ -6,6 +6,9 @@ export default {
 		extend: {
 			width: {
 				'180': '180%'
+			},
+			textColor: {
+				'custom-sky-blue': '#50A5DD'
 			}
 		},
 	},
