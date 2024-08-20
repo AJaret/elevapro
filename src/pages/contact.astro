@@ -22,11 +22,48 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
         
-        <section id="contact_form" class="mt-28">
+        <section id="contact_form" class="mt-28 container">
             <div class="flex justify-center">
 				<div class="text-center w-2/3">
 					<h1 class="font-bold text-4xl">Contáctanos</h1>
 					<p class="mt-8">“Para soluciones que realmente marcan la diferencia, <span class="text-custom-sky-blue">Elevapro</span> es tu aliado.<br>¡Conéctate con nosotros!”</p>
+				</div>
+			</div>
+
+			<div class="flex flex-wrap md:flex-nowrap justify-center items-center mt-28">
+				<div class="md:pr-10 md:border-r-2 md:border-[#6F6D71] w-1/3">
+					<p class="font-bold text-black text-sm">DIRECCIÓN</p>
+					<p class="text-xs text-[#6F6D71] mt-2">Av tepetitla 1. La Purificación Texcoco, Edo Méx.<br>C.P. 56240</p>
+				</div>
+				<div class="md:pl-10 md:border-r-2 md:border-[#6F6D71] w-1/3">
+					<p class="font-bold text-black text-sm">CONTACTO</p>
+					<p class="text-xs text-[#6F6D71] mt-2">Email: contacto@elevapro.com<br>Telefono: 595 92 5 1327</p>
+				</div>
+				<div class="md:pl-10">
+					<p class="font-bold text-black text-sm">REDES SOCIALES</p>
+					<div class="flex flex-wrap md:flex-nowrap justify-center items-center gap-4 mt-2">
+						<svg class="h-6 w-6 text-gray-900"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="16" height="16" rx="4" />  <circle cx="12" cy="12" r="3" />  <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" /></svg>
+						<svg class="w-6 h-6 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg>
+						<svg class="w-6 h-6 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/><path d="M7.2 8.809H4V19.5h3.2V8.809Z"/></svg>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-24">
+				<div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+					<input class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="text" placeholder="Nombre *" name="name" />
+					<input class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="email" placeholder="Email *" />
+				</div>
+				<div class="my-4">
+					<input class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="text" placeholder="Asunto *" />
+				</div>
+				<div class="my-4">
+					<textarea placeholder="Mensaje *" class="w-full h-32 bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline"></textarea>
+				</div>
+				<div class="my-2 flex justify-end">
+					<button class="uppercase text-sm font-bold tracking-wide bg-[#50A5DD] text-gray-100 p-3 w-1/4 focus:outline-none focus:shadow-outline">
+						ENVIAR
+					</button>
 				</div>
 			</div>
         </section>
