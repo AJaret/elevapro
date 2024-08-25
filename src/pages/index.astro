@@ -30,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
 		<Navbar/>
 		<section id="header" class="flex justify-center items-center">
 			<div class="container flex flex-wrap md:flex-nowrap">
-				<div class="w-full md:w-1/2 mb-4 md:mb-0">
+				<div class="w-full md:w-1/2 mb-4 md:mb-0" id="header-text">
 					<Image src={BlueE} alt="About Image" class="w-1/4" />
 					<h1>Innovación y calidad que te elevan al siguiente nivel.</h1>
 					<p><span style="color: #50A5DD; font-weight: bold;">Elevapro</span> es una empresa mexicana con profesionales en la instalación, reparación, modernización y mantenimiento de sistemas de elevadores y escaleras eléctricas.</p>
@@ -61,21 +61,23 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</div>
 				<div class="mt-12">
-					<button class="text-white p-3 flex items-center font-bold">
-						CONTACTO
-						<span class="ml-2 inline-flex">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-						</svg>
-						</span>
-					</button>
+					<a href="/contact">
+						<button class="text-white p-3 flex items-center font-bold">
+							CONTACTO
+							<span class="ml-2 inline-flex">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+							</svg>
+							</span>
+						</button>
+					</a>
 				</div>
 			</div>
 		</section>		  
 
 		<section id="hire" class="mt-20">
 			<div class="flex flex-wrap md:flex-nowrap justify-between items-center container gap-12 pt-16 pb-16">
-				<div class="w-full md:w-1/2">
+				<div class="w-full md:w-1/2" id="hire-text">
 					<p class="text-custom-sky-blue font-bold">Nuestros servicios</p>
 					<h1 class="text-white mt-5 text-3xl font-bold">Por Qué Contratarnos</h1>
 					<ul class="list-none mt-10">
@@ -120,14 +122,16 @@ import Layout from "../layouts/Layout.astro";
 						</li>
 					</ul>
 					<div class="flex justify-end items-center">
-						<button class="text-white p-5 rounded-sm flex items-center font-bold">
-							SERVICIOS
-							<span class="ml-2 inline-flex">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-								</svg>
-							</span>
-						</button>
+						<a href="/services">
+							<button class="text-white p-5 rounded-sm flex items-center font-bold">
+								SERVICIOS
+								<span class="ml-2 inline-flex">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+									</svg>
+								</span>
+							</button>
+						</a>
 					</div>
 				</div>
 				<div class="w-full md:w-1/2">
@@ -167,18 +171,20 @@ import Layout from "../layouts/Layout.astro";
 			</div>			  
 
 			<div class="mt-12 flex justify-center items-center">
-				<button class="text-white p-5 rounded-sm flex items-center font-bold">
-					SERVICIOS
-					<span class="ml-2 inline-flex">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-					</svg>
-					</span>
-				</button>
+				<a href="/services">
+					<button class="text-white p-5 rounded-sm flex items-center font-bold">
+						SERVICIOS
+						<span class="ml-2 inline-flex">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+						</svg>
+						</span>
+					</button>
+				</a>
 			</div>
 		</section>
 
-		<section id="maintenance" class="mt-28 container">
+		<section id="maintenance" class="mt-20 container">
 			<div class="flex flex-wrap md:flex-nowrap justify-between items-center gap-16">
 				<div class="text-right md:w-1/2 w-full">
 					<h1 class="text-5xl font-bold">Mantenimiento Preventivo y Correctivo</h1>
@@ -281,6 +287,51 @@ import Layout from "../layouts/Layout.astro";
 	</main>
 </Layout>
 
+<script>
+	document.addEventListener('scroll', () => {
+		const about:Element = (document.querySelector('#about') as Element);
+        const hire:Element = (document.querySelector('#hire-text') as Element);
+        const solutions:Element = (document.querySelector('#solutions') as Element);
+        const maintenance:Element = (document.querySelector('#maintenance') as Element);
+        const process:Element = (document.querySelector('#process') as Element);
+        const goals:Element = (document.querySelector('#goals') as Element);
+
+        if (isInViewport((about)) && !(about as Element).classList.contains('show')) {
+			(about as Element).classList.add('show');
+        }
+        if (isInViewport((hire)) && !(hire as Element).classList.contains('show')) {
+			(hire as Element).classList.add('show');
+        }
+        if (isInViewport((solutions)) && !(solutions as Element).classList.contains('show')) {
+			(solutions as Element).classList.add('show');
+        }
+        if (isInViewport((maintenance)) && !(maintenance as Element).classList.contains('show')) {
+			(maintenance as Element).classList.add('show');
+        }
+        if (isInViewport((process)) && !(process as Element).classList.contains('show')) {
+			(process as Element).classList.add('show');
+        }
+        if (isInViewport((goals)) && !(goals as Element).classList.contains('show')) {
+			(goals as Element).classList.add('show');
+        }
+    });
+
+	const header:Element = (document.querySelector('#header-text') as Element);
+
+	if (isInViewport((header)) && !(header as Element).classList.contains('show')) {
+		(header as Element).classList.add('show');
+	}
+
+    function isInViewport(element:Element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 700 &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth) + 700
+        );
+    }
+</script>
 
 <style>
 	#header{

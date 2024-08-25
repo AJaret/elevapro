@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 		<Header1/>
 		<Navbar/>
 		<section id="header" class="flex justify-center items-center">
-			<div class="container flex flex-wrap md:flex-nowrap">
+			<div class="container flex flex-wrap md:flex-nowrap" id="header-text">
 				<div class="w-full md:w-1/2 mb-4 md:mb-0">
 					<Image src={BlueE} alt="About Image" class="w-1/4" />
 					<h1 class="font-bold text-4xl mt-8">Contacto</h1>
@@ -49,28 +49,84 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</div>
 
-			<div class="mt-24">
-				<div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
-					<input class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="text" placeholder="Nombre *" name="name" />
-					<input class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="email" placeholder="Email *" />
+			<form method="post" action="https://elevapro.com.mx/send_email/email.php">
+				<div class="mt-24">
+					<div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+						<input required class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="text" placeholder="Nombre *" name="name" />
+						<input required class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="email" placeholder="Email *" name="email" />
+					</div>
+					<div class="my-4">
+						<input required class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="text" placeholder="Asunto *" name="subject" />
+					</div>
+					<div class="my-4">
+						<textarea required placeholder="Mensaje *" class="w-full h-32 bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" name="message"></textarea>
+					</div>
+					<div class="my-2 flex justify-end">
+						<button type="submit" class="uppercase text-sm font-bold tracking-wide bg-[#50A5DD] text-gray-100 p-3 w-1/4 focus:outline-none focus:shadow-outline">
+							ENVIAR
+						</button>
+					</div>
 				</div>
-				<div class="my-4">
-					<input class="w-full bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline" type="text" placeholder="Asunto *" />
-				</div>
-				<div class="my-4">
-					<textarea placeholder="Mensaje *" class="w-full h-32 bg-white border-[#C4C4C4] border-2 text-gray-900 mt-2 p-3 focus:outline-none focus:shadow-outline"></textarea>
-				</div>
-				<div class="my-2 flex justify-end">
-					<button class="uppercase text-sm font-bold tracking-wide bg-[#50A5DD] text-gray-100 p-3 w-1/4 focus:outline-none focus:shadow-outline">
-						ENVIAR
-					</button>
-				</div>
-			</div>
+			</form>
         </section>
 
 		<Footer />
 	</main>
 </Layout>
+
+<script>
+
+	window.onload = function() {
+        const getUrlParameter = (name:String) => {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+        const mailsent = getUrlParameter('mailsent');
+        if (mailsent === 'true') {
+            var confirmationMessage = document.createElement("div");
+            confirmationMessage.textContent = "¡Correo enviado correctamente!";
+            confirmationMessage.style.position = "fixed";
+            confirmationMessage.style.top = "150px";
+            confirmationMessage.style.left = "50%";
+            confirmationMessage.style.transform = "translateX(-50%)";
+            confirmationMessage.style.backgroundColor = "green";
+            confirmationMessage.style.color = "white";
+            confirmationMessage.style.padding = "10px";
+            confirmationMessage.style.borderRadius = "5px";
+            confirmationMessage.style.display = "none";
+            confirmationMessage.id = "confirmationMessage";
+            document.body.appendChild(confirmationMessage);
+
+            setTimeout(function() {
+                confirmationMessage.style.display = "block";
+            }, 2000);
+
+            setTimeout(function() {
+                confirmationMessage.style.display = "none";
+            }, 10000);
+        }
+    };
+
+	const header:Element = (document.querySelector('#header-text') as Element);
+	const contact_form:Element = (document.querySelector('#contact_form') as Element);
+
+	if (isInViewport((header)) && !(header as Element).classList.contains('show')) {
+		(header as Element).classList.add('show');
+		(contact_form as Element).classList.add('show');
+	}
+
+    function isInViewport(element:Element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 700 &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth) + 700
+        );
+    }
+</script>
 
 <style>
     #header{

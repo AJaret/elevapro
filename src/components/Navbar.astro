@@ -20,7 +20,7 @@ const currentPage = Astro.url.pathname;
     </label>
     <input class="hidden" type="checkbox" id="menu-toggle" />
 
-    <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+    <div class="hidden md:flex md:items-center md:w-auto w-full" id="navbar_menu">
         <nav>
             <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                 <li>
@@ -37,6 +37,22 @@ const currentPage = Astro.url.pathname;
     </div>
 </header>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle') as HTMLInputElement | null;
+        const menu = document.getElementById('navbar_menu') as HTMLElement | null;
+
+        if (menuToggle && menu) {
+            menuToggle.addEventListener('change', () => {
+            if (menuToggle.checked) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+            });
+        }
+    });
+</script>
 
 <style>
     header{
@@ -47,3 +63,4 @@ const currentPage = Astro.url.pathname;
         font-weight: bold;
     }
 </style>
+

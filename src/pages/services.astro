@@ -24,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
 		<Navbar/>
 		<section id="header" class="flex justify-center items-center">
 			<div class="container flex flex-wrap md:flex-nowrap">
-				<div class="w-full md:w-1/2 mb-4 md:mb-0">
+				<div class="w-full md:w-1/2 mb-4 md:mb-0" id="header-text">
 					<Image src={BlueE} alt="About Image" class="w-1/4" />
 					<h1 class="font-bold text-4xl mt-8">Nuestros servicios</h1>
 				</div>
@@ -42,19 +42,23 @@ import Layout from "../layouts/Layout.astro";
                     <p class="mt-5 text-sm">Evaluamos las condiciones de tu equipo para crear un plan de trabajo, según las necesidades del proyecto, basándonos en módulos mensuales para un correcto servicio de mantenimiento de elevadores.</p>
                     <p class="mt-5 text-lg">Instalación de Elevadores y Escaleras Eléctricas</p>
                     <p class="mt-5 text-sm">Nuestro equipo de expertos se encarga de la instalación de sistemas de transporte vertical, asegurando que cada proyecto cumpla con las normas vigentes y los más altos estándares de calidad y seguridad. Trabajamos con múltiples marcas, lo que nos permite ofrecer soluciones a medida para cada cliente.</p>
-                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    <a href="/contact">
+                        <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="maintenance_program" class="mt-32 color-[#323C45]">
+        <section id="emergency_calls" class="mt-32 color-[#323C45]">
             <div class="container flex flex-wrap md:flex-nowrap items-center">
                 <div class="w-full md:w-1/2">
                     <h1 class="font-bold text-3xl">Llamadas de Emergencia</h1>
                     <p class="mt-5 text-sm">Las llamadas de emergencia y servicio de rescate, todos los días del año, con personal profesional y capacitado, sin costo adicional.</p>
                     <p class="mt-5 text-lg">Atención de Emergencias</p>
                     <p class="mt-5 text-sm">Entendemos que las fallas pueden ocurrir en cualquier momento. Por ello, ofrecemos un servicio de atención de emergencias disponible las 24 horas del día, los 7 días de la semana, asegurando una respuesta rápida y eficaz ante cualquier inconveniente.</p>
-                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    <a href="/contact">
+                        <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    </a>
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center">
                     <Image src={EmergencyCall} alt="About Image" class="w-2/3 mt-10 md:mt-0" />
@@ -71,7 +75,9 @@ import Layout from "../layouts/Layout.astro";
                     <h1 class="font-bold text-3xl">Reparaciones</h1>
                     <p class="mt-5 text-sm">Contamos con el personal certificado para reparar sus ascensores en el menor tiempo. Utilizando las herramientas adecuadas para realizar reparaciones menores o mayores.</p>
                     <p class="mt-5 text-sm">Nuestros técnicos están altamente capacitados para diagnosticar y reparar cualquier problema que puedan presentar sus sistemas de transporte vertical. Utilizamos piezas y componentes de alta calidad para asegurar reparaciones duraderas y eficaces.</p>
-                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    <a href="/contact">
+                        <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -85,7 +91,9 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                     <div class="w-full md:w-1/2">
                         <p class="text-sm">En <span class="text-custom-sky-blue">Elevapro</span>, nuestros valores fundamentales guían cada acción y decisión que tomamos. Creemos firmemente que estos principios son esenciales para proporcionar servicios de alta calidad y asegurar la satisfacción y seguridad de nuestros clientes.</p>
-                        <button class="pt-3 pb-3 pl-5 pr-5 border-white border-2 mt-6">Contactanos</button>
+                        <a href="/contact">
+                            <button class="pt-3 pb-3 pl-5 pr-5 border-white border-2 mt-6">Contactanos</button>
+                        </a>
                     </div>
                 </div>
     
@@ -117,7 +125,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </section>
 
-        <section id="maintenance_program" class="mt-32 color-[#323C45]">
+        <section id="modernizations" class="mt-32 color-[#323C45]">
             <div class="container flex flex-wrap md:flex-nowrap items-center">
                 <div class="w-full md:w-1/2 flex justify-center">
                     <Image src={Modernizations} alt="About Image" class="w-2/3 mb-10 md:mb-0" />
@@ -125,19 +133,23 @@ import Layout from "../layouts/Layout.astro";
                 <div class="w-full md:w-1/2">
                     <h1 class="font-bold text-3xl">Modernizaciones</h1>
                     <p class="mt-5 text-sm">Si lo que buscas es aumentar la plusvalía de tu inmueble y un ahorro de energía o cambios estéticos nosotros podemos renovarlo y adaptarlo a los estándares de seguridad vigentes.<br><br>Ofrecemos servicios de modernización para actualizar y mejorar sus elevadores y escaleras eléctricas. La modernización puede incluir la actualización de componentes mecánicos y electrónicos, así como la mejora de la eficiencia energética y la implementación de nuevas tecnologías. Este servicio no solo mejora el rendimiento y la seguridad, sino que también puede aumentar el valor de su propiedad.</p>
-                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    <a href="/contact">
+                        <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="maintenance_program" class="mt-32 color-[#323C45]">
+        <section id="spare_parts" class="mt-32 color-[#323C45]">
             <div class="container flex flex-wrap md:flex-nowrap items-center">
                 <div class="w-full md:w-1/2">
                     <h1 class="font-bold text-3xl">Refacciones</h1>
                     <p class="mt-5 text-sm">Elevapro cuenta con un amplio stock de refacciones, nuevas y originales garantizadas para tu elevador.</p>
                     <p class="mt-5 text-lg">Capacitación</p>
                     <p class="mt-5 text-sm">Proveemos capacitación a su personal sobre el uso y mantenimiento adecuado de los sistemas instalados. Esto asegura un manejo correcto y eficiente de los equipos, minimizando el riesgo de fallas y accidentes.</p>
-                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    <a href="/contact">
+                        <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    </a>
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center">
                     <Image src={RepairParts} alt="About Image" class="w-2/3 mt-10 md:mt-0" />
@@ -145,7 +157,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </section>
         
-        <section id="repairs" class="mt-32 color-[#323C45]">
+        <section id="civil_liability" class="mt-32 color-[#323C45]">
             <div class="container flex flex-wrap md:flex-nowrap items-center">
                 <div class="w-full md:w-1/2 flex justify-center">
                     <Image src={CivilLiability} alt="About Image" class="w-2/3 mb-10 md:mb-0" />
@@ -155,7 +167,9 @@ import Layout from "../layouts/Layout.astro";
                     <p class="mt-5 text-sm">Elevapro cuenta con un seguro de responsabilidad civil para seguridad y tranquilidad de nuestros clientes.</p>
                     <p class="mt-5 text-lg">Auditorías y Evaluaciones de Seguridad</p>
                     <p class="mt-5 text-sm">Realizamos auditorías y evaluaciones de seguridad para asegurar que sus elevadores y escaleras eléctricas cumplan con todas las normativas y estándares de seguridad. Estas auditorías nos permiten identificar posibles riesgos y recomendar acciones correctivas para mejorar la seguridad y el desempeño de los equipos.</p>
-                    <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    <a href="/contact">
+                        <button class="bg-[#50A5DD] pt-3 pb-3 pl-4 pr-4 text-white mt-6">Contactanos</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -163,6 +177,54 @@ import Layout from "../layouts/Layout.astro";
 		<Footer />
 	</main>
 </Layout>
+
+<script>
+	document.addEventListener('scroll', () => {
+		const emergency_calls:Element = (document.querySelector('#emergency_calls') as Element);
+		const repairs:Element = (document.querySelector('#repairs') as Element);
+		const values:Element = (document.querySelector('#values') as Element);
+		const modernizations:Element = (document.querySelector('#modernizations') as Element);
+		const spare_parts:Element = (document.querySelector('#spare_parts') as Element);
+		const civil_liability:Element = (document.querySelector('#civil_liability') as Element);
+
+        if (isInViewport((emergency_calls)) && !(emergency_calls as Element).classList.contains('show')) {
+			(emergency_calls as Element).classList.add('show');
+        }
+        if (isInViewport((repairs)) && !(repairs as Element).classList.contains('show')) {
+			(repairs as Element).classList.add('show');
+        }
+        if (isInViewport((values)) && !(values as Element).classList.contains('show')) {
+			(values as Element).classList.add('show');
+        }
+        if (isInViewport((modernizations)) && !(modernizations as Element).classList.contains('show')) {
+			(modernizations as Element).classList.add('show');
+        }
+        if (isInViewport((spare_parts)) && !(spare_parts as Element).classList.contains('show')) {
+			(spare_parts as Element).classList.add('show');
+        }
+        if (isInViewport((civil_liability)) && !(civil_liability as Element).classList.contains('show')) {
+			(civil_liability as Element).classList.add('show');
+        }
+    });
+
+	const header:Element = (document.querySelector('#header-text') as Element);
+	const maintenance_program:Element = (document.querySelector('#maintenance_program') as Element);
+
+	if (isInViewport((header)) && !(header as Element).classList.contains('show')) {
+		(header as Element).classList.add('show');
+		(maintenance_program as Element).classList.add('show');
+	}
+
+    function isInViewport(element:Element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 700 &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth) + 700
+        );
+    }
+</script>
 
 <style>
     #header{
